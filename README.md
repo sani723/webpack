@@ -150,7 +150,7 @@ module.exports = {
 };
 ```
 
-`Turn on watch mode`. This means that after the initial build, webpack will continue to watch for changes in any of the resolved files. Watch mode is turned off by default so you have to enable it in `webpack.config.js`.
+**Turn on watch mode:** This means that after the initial build, webpack will continue to watch for changes in any of the resolved files. Watch mode is turned off by default so you have to enable it in `webpack.config.js`.
 
 ```js
 watch: true
