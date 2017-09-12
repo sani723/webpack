@@ -109,3 +109,48 @@ module.exports = {
   ] 
 };
 ```
+
+## Installing webpack?
+
+You need to have `node.js` installed. In your terminal run following command 
+```js
+$ npm install webpack -g
+```
+
+We are installing a global version of webpack and what that means is we are installing webpack so that we can use it across all the directories any folder available on our computer rather than being restricted to just one particular folder and by doing this way have to install webpack once rather than doing it multiple times on a project by project basis.
+
+Then run the following:
+
+```js
+$ webpack app.js bundle.js
+```
+
+It will compile your file and create a bundle file. 
+
+### Config file
+webpack is fed via a configuration object. It is passed in one of two ways depending on how you are using webpack, through the * terminal
+* Node.js
+
+To enable automatic bundling whenever a file is saved, as we do not have to tell webpack it must compile app.js and build.js every single time because it is really inconvenient. We need to move the config options into a config file `webpack.config.js`.
+
+```js
+// webpack.config.js
+
+module.exports = {
+    entry: "./app.js",
+    output: {
+        filename: "build.js"
+    },
+    module: {
+        loaders: [
+            { test: /\.css$/, use: "style-loader!css-loader" }
+        ]
+    }
+};
+```
+
+`Turn on watch mode`. This means that after the initial build, webpack will continue to watch for changes in any of the resolved files. Watch mode is turned off by default so you have to enable it in `webpack.config.js`.
+
+```js
+watch: true
+```
