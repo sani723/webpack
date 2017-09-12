@@ -128,7 +128,8 @@ $ webpack app.js bundle.js
 It will compile your file and create a bundle file. 
 
 ### Config file
-webpack is fed via a configuration object. It is passed in one of two ways depending on how you are using webpack, through the * terminal
+webpack is fed via a configuration object. It is passed in one of two ways depending on how you are using webpack, through the 
+* terminal
 * Node.js
 
 To enable automatic bundling whenever a file is saved, as we do not have to tell webpack it must compile app.js and build.js every single time because it is really inconvenient. We need to move the config options into a config file `webpack.config.js`.
